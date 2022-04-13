@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules\bootstrap-icons\font\bootstrap-icons.css">
+    <link rel="stylesheet" href="week11.css">
+
+</head>
+<body>
+    <div class="heading1">TIC TAC TOE</div>
+    <div class="heading2"><small>"Lets Play!!!"</small></h2>
+    <div class="alert alert-secondary" id="display" role="alert"> Player X`s Turn</div> 
+        
+        <div class="gameBoard">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div>
+                <h1>Game Over !!!</h1>
+                <div class="btns">
+                    <button class="btn btn-restart" id="btn-restart">
+                        <i class="bi bi-arrow-repeat"></i><strong>Restart </strong>
+                    </button>
+                    <button class="btn btn-quit" id="btn-quit">
+                        <i class="bi bi-power"></i><strong>Quit</strong>
+                    </button>
+                </div>
+            </div>
+        </div>      
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="week11.js"></script>
+
+</body>
+</html>

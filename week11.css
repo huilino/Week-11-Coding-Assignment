@@ -1,0 +1,177 @@
+
+@font-face {
+    font-family: 'chunkfiveregular';
+    src: url('chunkfive-regular-webfont.woff2') format('woff2'),
+         url('chunkfive-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*, *::after, *::before {
+    box-sizing:border-box;
+} 
+
+body {
+    
+    background-color: aliceblue;
+    font-family: cursive;
+    margin:0;
+    place-items:center; 
+    display: grid;
+    min-height:100vh;
+
+}
+
+#display{
+    font-size:60px;
+    font-family: cursive;
+    padding:15px;
+    width:560px;
+    background-color: black;
+    border-radius:10px;
+    text-align: center;
+    color:rgb(202, 43, 226);
+    border: 10px solid red;
+}
+
+.gameBoard {
+    width:540px;
+    height:540px;  
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap:10px;
+    margin-bottom: 20px;
+    
+}
+
+.box {
+    height: 180px;
+    width: 180px;
+    align-items:center; 
+    border : 1px solid white;
+    background-color: rgb(211, 176, 224);
+    font-family: cursive;
+    font-size:100px;
+    cursor:pointer;
+    color:black; 
+}
+
+.circle::before,
+.cross::before,
+.circle:hover::before,
+.cross:hover::before
+{
+    content : "\274C";
+    font-size:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+} 
+
+.circle::before,
+.circle:hover::before
+{
+    content : "\26AB";
+}
+
+.circle:hover::before,
+.cross:hover::before
+{
+    opacity:0.3;
+}
+
+
+.heading1 {
+    font-family : 'chunkfiveregular';
+    font-size : 100px;
+    text-align : center;
+    color : rgb(167, 72, 167);
+    
+    
+}
+
+.heading2 {
+    font-family : sans-serif;
+    font-size : 60px;
+    font-weight: 1rem;
+    text-align : center;
+    color : plum;
+    
+}
+
+.overlay {
+    max-height: 0px; 
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size : 100px;
+    color:antiquewhite;
+    background-color: rgb(0,0,0,0.7);
+    overflow:hidden; 
+}
+
+.overlay h1 {
+    margin-top: 100px;
+    background: linear-gradient(to right, white, white, black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    font-family: 'chunkfiveregular';
+
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap :10px;
+    
+
+}
+
+.btn {
+    padding: 20px;
+    border-radius:8px;
+    border: none;
+    outline: none;
+    font-size:30px;
+    transition: all 0.5s ease-in-out;
+    cursor:pointer;
+    color:black;
+}
+
+.btn:hover{
+    background-position: right;
+    color:aliceblue;
+}
+#btn-restart {
+    background-color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#btn-restart:hover{
+    
+    transform: translateY(-10px);
+}
+#btn-quit {
+    background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btn-quit:hover {
+    transform: translateY(-10px);
+}
+
+.overlay.active {
+    max-height:100vh;
+}
+
+.highlight{
+    background-color: rgb(136, 70, 149);
+}
+
